@@ -1,0 +1,13 @@
+Objects: 
+
+person
+bike
+dockingstation
+
+Messages:
+working?
+Release_bike?
+
+
+Bike <-- working? --> true/false
+DockingStation <-- release_bike --> a Bike
