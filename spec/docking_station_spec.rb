@@ -17,8 +17,10 @@ describe DockingStation do
   end
 
   it "raises an error when full and you try to dock a bike" do 
-    20.times { subject.dock Bike.new }
-    expect { subject.dock(Bike.new) }.to raise_error "No space available" 
+    DockingStation::DEFAULT_CAPACITY.times do
+      subject.dock Bike.new
+    end
+    expect { subject.dock Bike.new }.to raise_error "No space available" 
   end
 
 
