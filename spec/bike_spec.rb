@@ -13,4 +13,10 @@ describe Bike do
     expect(bike.working?).to eq false
   end
 
+  it 'changes status of bike from working to broken' do
+    bike = Bike.new
+    bike.report('broken')
+    expect(bike.working?).to eq false
+  end
+
 end

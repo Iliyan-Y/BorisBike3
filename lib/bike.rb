@@ -9,4 +9,7 @@ class Bike
       false
     end
   end
+  def report(status)
+    @working = status
+  end
 end
